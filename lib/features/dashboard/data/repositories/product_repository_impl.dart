@@ -1,5 +1,5 @@
-import '../../../core/constants/api_constants.dart';
-import '../../../core/services/dio_client.dart';
+import '../../../../core/constants/api_constants.dart';
+import '../../../../core/services/dio_client.dart';
 import '../../domain/repositories/product_repository.dart';
 import '../models/product_model.dart';
 

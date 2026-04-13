@@ -21,7 +21,7 @@ class AuthHeader extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
-            color: (iconColor ?? const Color(0xFFB71C1C)).withOpacity(0.1),
+            color: (iconColor ?? const Color(0xFFB71C1C)).withAlpha(26),
             shape: BoxShape.circle,
           ),
           child: Icon(icon, size: 48, color: iconColor ?? const Color(0xFFB71C1C)),

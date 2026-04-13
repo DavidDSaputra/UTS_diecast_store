@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../auth/presentation/providers/auth_provider.dart';
-import '../../../auth/presentation/pages/login_page.dart';
 import '../../presentation/providers/product_provider.dart';
 import '../../data/models/product_model.dart';
 import '../../../../core/routes/app_router.dart';

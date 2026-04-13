@@ -2,11 +2,11 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../core/routes/app_router.dart';
-import '../../../core/widgets/auth_header.dart';
-import '../../../core/widgets/custom_button.dart';
-import '../../../core/widgets/custom_text_field.dart';
-import '../../../core/widgets/loading_overlay.dart';
+import '../../../../core/routes/app_router.dart';
+import '../../../../core/widgets/auth_header.dart';
+import '../../../../core/widgets/custom_button.dart';
+import '../../../../core/widgets/custom_text_field.dart';
+import '../../../../core/widgets/loading_overlay.dart';
 import '../providers/auth_provider.dart';
 
 class RegisterPage extends StatefulWidget {

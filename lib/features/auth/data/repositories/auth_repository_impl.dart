@@ -1,5 +1,5 @@
-import '../../../core/constants/api_constants.dart';
-import '../../../core/services/dio_client.dart';
+import '../../../../core/constants/api_constants.dart';
+import '../../../../core/services/dio_client.dart';
 import '../../domain/repositories/auth_repository.dart';
 
 class AuthRepositoryImpl implements AuthRepository {

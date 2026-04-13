@@ -39,13 +39,14 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
       final success = await auth.checkEmailVerified();
       if (success && mounted) {
         _timer?.cancel();
-        Navigator.pushReplacementNamed(context, AppRouter.dashboard);
+        AppRouter.navigatorKey.currentState?.pushReplacementNamed(AppRouter.dashboard);
       }
     });
   }
 
   Future<void> _resendEmail() async {
     if (_resendCooldown) return;
+    final messenger = ScaffoldMessenger.of(context);
     await context.read<AuthProvider>().resendVerificationEmail();
 
     setState(() {
@@ -65,7 +66,7 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
       }
     });
 
-    ScaffoldMessenger.of(context).showSnackBar(
+    messenger.showSnackBar(
       const SnackBar(content: Text('Email verifikasi sudah dikirim ulang')),
     );
   }

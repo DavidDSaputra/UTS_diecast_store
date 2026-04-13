@@ -81,10 +81,12 @@ class _LoginPageState extends State<LoginPage> {
           TextButton(onPressed: () => Navigator.pop(context), child: const Text('Batal')),
           ElevatedButton(
             onPressed: () async {
+              final navigator = Navigator.of(context);
               try {
                 await FirebaseAuth.instance.sendPasswordResetEmail(email: ctrl.text.trim());
               } catch (_) {}
-              if (context.mounted) Navigator.pop(context);
+              if (!mounted) return;
+              navigator.pop();
             },
             child: const Text('Kirim'),
           ),

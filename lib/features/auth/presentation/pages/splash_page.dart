@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import '../../../../core/routes/app_router.dart';
-import '../../../../core/services/secure_storage.dart';
+import '../providers/auth_provider.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -19,8 +21,16 @@ class _SplashPageState extends State<SplashPage> {
   Future<void> _checkAuth() async {
     await Future.delayed(const Duration(seconds: 1));
     if (!mounted) return;
-    final token = await SecureStorageService.getToken();
-    final route = token != null ? AppRouter.dashboard : AppRouter.login;
+
+    final auth = context.read<AuthProvider>();
+    await auth.initialize();
+    final route = auth.status == AuthStatus.authenticated
+        ? AppRouter.dashboard
+        : auth.status == AuthStatus.emailNotVerified
+            ? AppRouter.verifyEmail
+            : AppRouter.login;
+
+    if (!mounted) return;
     Navigator.pushReplacementNamed(context, route);
   }
 

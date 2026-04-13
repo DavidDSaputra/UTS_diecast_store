@@ -76,9 +76,10 @@ class _DashboardPageState extends State<DashboardPage> {
           IconButton(
             icon: const Icon(Icons.logout),
             onPressed: () async {
+              final navigator = Navigator.of(context);
               await auth.logout();
               if (!mounted) return;
-              Navigator.pushReplacementNamed(context, AppRouter.login);
+              navigator.pushReplacementNamed(AppRouter.login);
             },
           ),
         ],

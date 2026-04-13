@@ -28,6 +28,7 @@ class DiecastStoreApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => ProductProvider()),
       ],
       child: MaterialApp(
+        navigatorKey: AppRouter.navigatorKey,
         title: 'Diecast Store',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.light,

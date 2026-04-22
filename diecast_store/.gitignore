@@ -1,0 +1,17 @@
+
+.vscode/templates
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+build/
+.idea/
+*.iml
+
+# Credentials & Secrets
+*firebase*adminsdk*.json
+client_secret*.json
+*.pem
+.env
+.env.local

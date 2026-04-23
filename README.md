@@ -1,6 +1,8 @@
 NAMA : DAVID SAPUTRA 
 NIM : 1123150039
 
+LINK VIEDO DEMO : https://youtu.be/XRcS2y7w72g
+
 # UTS Diecast Store
 
 Aplikasi Toko Diecast — Ujian Tengah Semester (UTS) Pemrograman Mobile
